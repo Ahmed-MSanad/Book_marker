@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Book Maker</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="bg-orange-subtle">
+        <main class="container-fluid bg-orange-subtle py-5">
+            <div class="container d-flex flex-column justify-content-center align-items-center">
+                <h1 class="bookmarker-title">Bookmarker</h1>
+                <div class="bookmarker-content w-100 py-4 px-3 mt-4">
+                    <h2 class="text-center text-nowrap">
+                        <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites
+                        <i class="fa-solid fa-bookmark"></i>
+                    </h2>
+                    <div class="bookmarker-fields mt-4">
+                        <div class="mb-4">
+                            <label for="siteName" class="form-label fw-semibold"><i class="fa-solid fa-book-bookmark fa-fw"></i> Site Name</label>
+                            <input type="email" oninput="checkSiteName();" class="form-control" id="siteName" placeholder="Bookmark Name">
+                        </div>
+                        <div class="mb-4">
+                            <label for="siteURL" class="form-label fw-semibold"><i class="fa-solid fa-link fa-fw"></i> Site URL</label>
+                            <input type="email" oninput="checkSiteURL();" class="form-control" id="siteURL" placeholder="Website URL">
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-red text-white px-5" id="BookMarkerBtn" onclick="addBookMarker();">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bookMarker-area container w-100 mt-4 p-0">
+                    <div class="row w-100 text-center bg-white border-bottom ms-0">
+                        <div class="col-2 py-2"><p class="mb-0 fw-bold">Index</p></div>
+                        <div class="col-4 py-2"><p class="mb-0 fw-bold">Website Name</p></div>
+                        <div class="col-3 py-2"><p class="mb-0 fw-bold">Visit</p></div>
+                        <div class="col-3 py-2"><p class="mb-0 fw-bold">Delete</p></div>
+                    </div>
+                    <div id="placeHere"></div>
+                </div>
+            </div>
+
+            <div class="overlay d-none" id="popupValidateMessage">
+
+                <div class="ValidateMessage h-100 d-flex justify-content-center align-items-center">
+                    <div class="bg-white w-25 p-4 rounded-3">
+                        <div class="mb-4">
+                            <ul class="d-flex align-items-center list-unstyled">
+                                <li class="bullets rounded-circle bg-danger"></li>
+                                <li class="bullets ms-2 rounded-circle bg-warning"></li>
+                                <li class="bullets ms-2 rounded-circle bg-success"></li>
+                                <li class="ms-auto"><button class="btn border-0" onclick="closePopupMessage();" id="validateMessageBtn"><i class="fa-solid fa-xmark fa-xl"></i></button></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="validateWarning mb-3">Site Name or Url is not valid, Please follow the rules below : </h2>
+                            <ul class="list-unstyled lead fw-medium">
+                                <li class="mb-3"><i class="fa-regular fa-circle-right fa-fw text-danger"></i> Site name must contain at least 3 characters or numbers only</li>
+                                <li><i class="fa-regular fa-circle-right fa-fw text-danger"></i> Site URL must be a valid one: 
+                                    <ul class="list-unstyled ps-5">
+                                        <li>https://www.[a-zA-Z0-9_-$].[a-zA-Z]{2,5}</li>
+                                        <li>http://www.[a-zA-Z0-9_-$].[a-zA-Z]{2,5}</li>
+                                        <li>www.[a-zA-Z0-9_-$].[a-zA-Z]{2,5}</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

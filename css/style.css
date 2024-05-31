@@ -1,0 +1,74 @@
+.bg-orange-subtle{
+    background-color: #f7ecde;
+}
+.btn-lemon{
+    background-color: #9eb23b;
+    --bs-btn-hover-bg: #8a9e23;
+}
+.btn-red{
+    background-color: #d1512d;
+    --bs-btn-hover-bg: #bb4420;
+}
+
+.main{
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 2;
+}
+.bullets{
+    width: 20px;
+    height: 20px;
+}
+.validateWarning{
+    font-family: "Bree Serif", serif;
+    font-size: 21px;
+    line-height: 1.3;
+    color: #352e28;
+}
+
+h1{
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    position: relative;
+    z-index: 1;
+}
+h1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background-color: #fec260;
+    bottom: 12%;
+    z-index: -1;
+    transition: height 0.3s ease-in-out;
+}
+h1:hover::before{
+    height: 55%;
+}
+
+.bookmarker-content{
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: #352e28;
+}
+
+.bookmarker-content h2{
+    font-family: "Righteous", sans-serif;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-control:focus{
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
