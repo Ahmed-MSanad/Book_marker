@@ -49,7 +49,7 @@ function displayBookMarkers(bookList){
             <div class="row w-100 text-center bg-white border-bottom ms-0">
                 <div class="col-2 py-2 d-flex justify-content-center align-items-center"><p class="mb-0">${i+1}</p></div>
                 <div class="col-4 py-2 d-flex justify-content-center align-items-center"><p class="mb-0">${bookList[i].WebsiteName}</p></div>
-                <div class="col-3 py-2"><a href="https:${bookList[i].WebsiteURL}" target="_blank" class="text-white btn btn-lemon"><i class="fa-solid fa-eye fa-fw"></i> Visit</a></div>
+                <div class="col-3 py-2"><a href="${bookList[i].WebsiteURL}" target="_blank" class="text-white btn btn-lemon"><i class="fa-solid fa-eye fa-fw"></i> Visit</a></div>
                 <div class="col-3 py-2"><button type="submit" onclick="deleteBookMarker(${i});" class="text-white btn btn-danger"><i class="fa-solid fa-trash-can fa-fw"></i> Delete</button></div>
             </div>
         `
